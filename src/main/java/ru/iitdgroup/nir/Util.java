@@ -4,8 +4,13 @@ package ru.iitdgroup.nir;
  * Misc utils
  */
 public class Util {
+    private Util() {
+        //do not create instance of this class
+    }
+
     /**
      * Print an in array human-readable way
+     *
      * @param data array to print
      * @return String. An array in format {1,1,2,3,5}
      */
@@ -19,9 +24,5 @@ public class Util {
         sb.append("}");
         return sb.toString();
     }
-    
-    private Util(){
-        //do not create instance of this class
-    }
-    
+
 }

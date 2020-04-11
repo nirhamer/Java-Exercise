@@ -10,11 +10,11 @@ import java.util.List;
 @SuppressWarnings({"squid:S106"})
 public class SubstractTheList {
     public static void main(String[] args) {
-        
+
         List<Integer> listA = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 28, 15, 3, 14, 5, 12, -42, 31, 15));
         List<Integer> listB = new ArrayList<>(Arrays.asList(15, 6, 8, 12, 31));
-        
-        
+
+
         System.out.println(" Original: " + listA.toString());
         System.out.println("To remove: " + listB.toString());
         removeBFromA(listA, listB);

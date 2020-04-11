@@ -4,7 +4,7 @@ package ru.iitdgroup.nir;
  * The exercise: Replace all numbers in the array which are greater than 15 by zeros
  */
 @SuppressWarnings({"squid:S106"})
-public class RepaceAllGreaterThan {
+public class ReplaceAllGreaterThan {
     public static void main(String[] args) {
         int[] data = new int[]{
                 1, 2, 3, 4, 28, 15, 3, 14, 5, 12, -42, 31, 15
@@ -17,7 +17,7 @@ public class RepaceAllGreaterThan {
     /**
      * Replace all numbers in the array which are greater than 15 by zeros
      *
-     * @param data array to work with
+     * @param data  array to work with
      * @param limit number to compare with
      */
     static void replaceAllGreaterThan(int[] data, int limit) {
