@@ -23,7 +23,7 @@ public class SubstractTheList {
 
     /**
      * Remove all items,which are present in list B from the list A
-     *
+     *not use utility array/collation
      * @param listA a list to work with
      * @param listB number to compare with
      */

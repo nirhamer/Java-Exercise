@@ -16,7 +16,7 @@ public class ChangeBiggestAndSmallest {
 
     /**
      * Change the position of the biggest and the smallest number in the array
-     *
+     *not use utility array/collation
      * @param data array to work with
      */
     static void swapBiggestAndSmallest(int[] data) {

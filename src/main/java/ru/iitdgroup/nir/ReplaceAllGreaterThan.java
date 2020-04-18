@@ -16,7 +16,7 @@ public class ReplaceAllGreaterThan {
 
     /**
      * Replace all numbers in the array which are greater than 15 by zeros
-     *
+     *not use utility array/collation
      * @param data  array to work with
      * @param limit number to compare with
      */
