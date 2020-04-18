@@ -8,7 +8,7 @@ import java.util.List;
  * The exercise: Remove all items,which are present in list B from the list A
  */
 @SuppressWarnings({"squid:S106"})
-public class SubstractTheList {
+public class SubtractTheList {
     public static void main(String[] args) {
 
         List<Integer> listA = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 28, 15, 3, 14, 5, 12, -42, 31, 15));
@@ -28,8 +28,6 @@ public class SubstractTheList {
      * @param listB number to compare with
      */
     static void removeBFromA(List<Integer> listA, List<Integer> listB) {
-        /*
-         ===== CREATE CODE HERE =====
-         */
+        listA.removeAll(listB);
     }
 }

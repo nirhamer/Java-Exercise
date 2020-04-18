@@ -1,28 +1,40 @@
 package ru.iitdgroup.nir;
 
-/**
- * The exercise: Replace all numbers in the array which are greater than 15 by zeros
- */
-@SuppressWarnings({"squid:S106"})
-public class ReplaceAllGreaterThan {
-    public static void main(String[] args) {
-        int[] data = new int[]{
-                1, 2, 3, 4, 28, 15, 3, 14, 5, 12, -42, 31, 15
-        };
-        System.out.println("Original: " + Util.toString(data));
-        replaceAllGreaterThan(data, 15);
-        System.out.println("Replaced: " + Util.toString(data));
-    }
+import java.util.ArrayList;
+import java.util.List;
 
-    /**
-     * Replace all numbers in the array which are greater than 15 by zeros
-     *
-     * @param data  array to work with
-     * @param limit number to compare with
-     */
-    static void replaceAllGreaterThan(int[] data, int limit) {
-        /*
-         ===== CREATE CODE HERE =====
-         */
+/**
+ * The exercise: Replace all numbers in the array which are greater than 15 by 0
+ */
+
+
+public class ReplaceAllGreaterThan {
+
+    public static void main(String[] args) {
+        int[] data = { 1, 2, 3, 4, 28, 15, 399, 14, 5, 12, -42, 31, 15,};
+
+        List<Integer> list = new ArrayList<Integer>();
+
+
+        for (int i : data){
+            list.add(i);
+        }
+
+        for(int i=0;i<list.size();i++){
+            if(list.get(i) > 15){
+                list.remove(i);
+                i--;
+            }
+        }
+
+        System.out.println(list);
+
     }
 }
+
+/**
+ * Replace all numbers in the array which are greater than 15 by zeros
+ *
+ * @param data  array to work with
+ * @param limit number to compare with
+ */
