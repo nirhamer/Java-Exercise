@@ -36,13 +36,13 @@ public class ChangeBiggestAndSmallest {
 
     public static int indexOfMax (int [] data) {
         int index = 0;
-        int min = data[index];
+        int max = data[index];
 
         for (int i=1; i<data.length; i++) {
 
 
-            if (data[i] > min) {
-                min = data[i];
+            if (data[i] > max) {
+                max = data[i];
                 index = i;
             }
 

@@ -1,6 +1,10 @@
 package ru.iitdgroup.nir;
 
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * The exercise:SubtractTheList
@@ -21,13 +25,23 @@ public class SubtractTheList {
 
     /**
      * Remove all items,which are present in list B from the list A
-     *not use utility array/collation
+     * not use utility array/collation
+     *
      * @param listA a list to work with
      * @param listB number to compare with
      */
-     private static <E> void removeBFromA(List<Integer> listA, List<Integer> listB) {
-        HashSet<Integer> listBAsSet = new HashSet<>(listB);
-        listA.removeIf(listBAsSet::contains);
+    @SuppressWarnings("Java8CollectionRemoveIf")
+    private static void removeBFromA(List<Integer> listA, List<Integer> listB) {
+        for (Iterator<Integer> iteratorA = listA.iterator(); iteratorA.hasNext(); ) {
+            Integer currentA = iteratorA.next();
+            if ( containsValue( listB, currentA)) iteratorA.remove();
+        }
+    }
 
+    private static boolean containsValue(List<Integer> listB, Integer currentA) {
+        for (Integer currentB : listB) {
+            if (currentA.equals(currentB)) return true;
+        }
+        return false;
     }
 }

@@ -4,7 +4,7 @@ package ru.iitdgroup.nir;
  * not use utility array/collation
  * Series values exercise
  */
-public class SeriesValues {
+class SeriesValues {
 
     /**
      * Create a function which will generate series of numbers like:
@@ -17,14 +17,14 @@ public class SeriesValues {
      * @param seriesLen series number
      * @return A list of values in a series, separated by single space
      */
-    public static String generateSeries( int seriesLen){
-        String text = "";
+    static String generateSeries(int seriesLen){
+        StringBuilder text = new StringBuilder();
         for (int i = 1; i <= seriesLen; i++)  {
-            text += i * 2 + " ";
+            text.append(i * 2).append(" ");
         }
 
-        text += seriesLen * 2;
+        text.append(seriesLen * 2);
 
-        return text;
+        return text.toString();
     }
 }
