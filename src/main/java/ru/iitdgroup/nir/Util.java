@@ -18,7 +18,7 @@ public class Util {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         for (int i = 0; i < data.length; i++) {
-            sb.append(data[i]);
+            sb.append(String.format("[%d]:%d", i, data[i]));
             if (i < data.length - 1) sb.append(", ");
         }
         sb.append("}");
