@@ -14,4 +14,11 @@ public class SeriesValuesTest {
         assertEquals(SeriesValues.generateSeries(4), "2 4 6 8 8");
         assertEquals(SeriesValues.generateSeries(5), "2 4 6 8 10 10");
     }
+
+    @Test
+    public void testGenerate1stPart(){
+
+    }
 }
+
+

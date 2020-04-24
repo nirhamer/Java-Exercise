@@ -15,10 +15,16 @@ public class SeriesValues {
      *  5 --> 2 4 6 8 10 10
      *  ...
      * @param seriesLen series number
-     * @return A list of values in a series, separated by single space 
+     * @return A list of values in a series, separated by single space
      */
     public static String generateSeries( int seriesLen){
-        return "?";
-    }
+        String text = "";
+        for (int i = 1; i <= seriesLen; i++)  {
+            text += i * 2 + " ";
+        }
 
+        text += seriesLen * 2;
+
+        return text;
+    }
 }

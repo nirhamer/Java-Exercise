@@ -1,14 +1,12 @@
 package ru.iitdgroup.nir;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
- * The exercise: Remove all items,which are present in list B from the list A
+ * The exercise:SubtractTheList
  */
 @SuppressWarnings({"squid:S106"})
-public class SubstractTheList {
+public class SubtractTheList {
     public static void main(String[] args) {
 
         List<Integer> listA = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 28, 15, 3, 14, 5, 12, -42, 31, 15));
@@ -27,9 +25,9 @@ public class SubstractTheList {
      * @param listA a list to work with
      * @param listB number to compare with
      */
-    static void removeBFromA(List<Integer> listA, List<Integer> listB) {
-        /*
-         ===== CREATE CODE HERE =====
-         */
+     private static <E> void removeBFromA(List<Integer> listA, List<Integer> listB) {
+        HashSet<Integer> listBAsSet = new HashSet<>(listB);
+        listA.removeIf(listBAsSet::contains);
+
     }
 }

@@ -14,15 +14,13 @@ public class ReplaceAllGreaterThan {
         System.out.println("Replaced: " + Util.toString(data));
     }
 
-    /**
-     * Replace all numbers in the array which are greater than 15 by zeros
-     *not use utility array/collation
-     * @param data  array to work with
-     * @param limit number to compare with
-     */
+
     static void replaceAllGreaterThan(int[] data, int limit) {
-        /*
-         ===== CREATE CODE HERE =====
-         */
+
+
+        for(int i = 0; i< data.length; i++){
+            if (data[i] > limit)
+            data[i] = 0;
+        }
     }
 }
